@@ -72,7 +72,7 @@ pry(main)> charlotte_bronte.books
 
 Use TDD to create a `Library` class that responds to the following interaction pattern.
 
-The `publication_time_frame_for` method takes an `Author` object as an argument returns a hash with two key/value pairs:
+The `publication_time_frame_for` method takes an `Author` object as an argument and returns a hash with two key/value pairs:
   * `:start` which points to the publication year of the `Author`'s first book.
   * `:end` which points to the publication year of the `Author`'s last book.
 
@@ -134,13 +134,13 @@ pry(main)> dpl.publication_time_frame_for(harper_lee)
 
 Use TDD to implement the following methods on the `Library` class:
 
-The `checkout` method should return `false` if a `Book` does not exist in the library or it is already checked out. Otherwise, it should return true indicating that the book has been checked out.
+The `checkout` method takes a `Book` as an argument. It should return `false` if a `Book` does not exist in the library or it is already checked out. Otherwise, it should return true indicating that the book has been checked out.
 
 The `checked_out_books` method should return an array of books that are currently checked out.
 
-The `return` takes a book as an argument. Calling this method means that a book is no longer checked out.
+The `return` method takes a `Book` as an argument. Calling this method means that a book is no longer checked out.
 
-The `most_popular_book` method should return the book that has been checked out the most times.
+The `most_popular_book` method should return the book that has been checked out the most.
 
 ```ruby
 pry(main)> require './lib/library'
