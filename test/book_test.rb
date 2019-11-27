@@ -21,4 +21,8 @@ class BookTest < Minitest::Test
     assert_equal "To Kill a Mockingbird", @book.title
     assert_equal "July 11, 1960", @book.publication_date
   end
+
+  def test_it_can_tell_us_publication_year
+    assert_equal "1960", @book.publication_year
+  end
 end
