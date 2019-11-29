@@ -26,6 +26,9 @@ class AuthorTest < Minitest::Test
     assert_equal [jane_eyre], @charlotte_bronte.books
     assert_equal Book, jane_eyre.class
     assert_equal "Jane Eyre", jane_eyre.title
+    assert_equal "Charlotte", jane_eyre.author_first_name
+    assert_equal "Bronte", jane_eyre.author_last_name
+    assert_equal "1847", jane_eyre.publication_year
     @charlotte_bronte.write("Villette", "1853")
     assert_equal 2, @charlotte_bronte.books.count
   end
